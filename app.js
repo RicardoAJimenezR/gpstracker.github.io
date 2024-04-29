@@ -1,12 +1,10 @@
-let dummyData;
-
 // Función para simular una llamada ficticia
 function dummyCall() {
   // Simulamos una respuesta exitosa después de un breve retraso
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       // Datos ficticios
-      dummyData = [
+      const dummyData = [
         { gpsId: 1, gpsSerial: '123', unitAssignedTo: 'Unidad 1', simCardId: '456', simCardUid: '789' },
         { gpsId: 2, gpsSerial: '456', unitAssignedTo: 'Unidad 2', simCardId: '789', simCardUid: '012' },
         { gpsId: 3, gpsSerial: '789', unitAssignedTo: 'Unidad 3', simCardId: '012', simCardUid: '345' }
