@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content= "width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css"/>
-    <script src="app.js"></script>
     <title>GPS Tracker</title>
   </head>
       
@@ -28,7 +27,29 @@
           </tbody>
         </table>
       </section>
+      <button id="btnAgregar">Agregar GPS</button>
+      <!--modal-->
+      <div id="modalAgregar" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <form id="formAgregar">
+            <label for="gpsId">Gps id:</label>
+            <input type="text" id="gpsId" name="gpsId" placeholder="Introduzca el GPS ID:"><br><br>
+            <label for="gpsSerial">Gps Serial:</label>
+            <input type="text" id="gpsSerial" name="gpsSerial" placeholder="Introduzca el GPS serial:"><br><br>
+            <label for="unitAssigned">Unit assigned:</label>
+            <input type="text" name="unitAssigned" id="unitAssigned" placeholder="Introduzca el unit assigned:"><br><br>
+            <label for="simCardId">Sim card id:</label>
+            <input type="text" name="simCardId" id="simCardId" placeholder="Introduzca el Sim card ID:"><br><br>
+            <label for="simCardUid">Sim card uid:</label>
+            <input type="text" name="simCardUid" id="simCardUid" placeholder="Introduzca el Sim card UID:"><br><br>
+            <!-- Botón para agregar la información a la tabla -->
+            <button type="button" onclick="agregarDatos()">Agregar</button>
+          </form>
+        </div>
+      </div>
     </main>
-    <footer>&copy; 2024 GPS Tracker</footer>
+    <footer>&copy; <span id="year"></span> GPS Tracker</footer>
+    <script src="app.js"></script>
   </body>
 </html>

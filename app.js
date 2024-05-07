@@ -56,3 +56,63 @@ async function llenarTabla() {
 
 // Llamar a la función para llenar la tabla al cargar la página
 document.addEventListener('DOMContentLoaded', llenarTabla);
+
+
+// Obtener el año actual y actualizar el pie de página
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Obtener el modal
+var modal = document.getElementById('modalAgregar');
+
+// Obtener el botón que abre el modal
+var btn = document.getElementById('btnAgregar');
+
+// Obtener el elemento <span> que cierra el modal
+var span = document.getElementsByClassName('close')[0];
+
+// Cuando el usuario hace clic en el botón, abrir el modal 
+btn.onclick = function () {
+  modal.style.display = 'block';
+}
+
+// Cuando el usuario hace clic en <span> (x), cerrar el modal
+span.onclick = function () {
+  modal.style.display = 'none';
+}
+
+// Cuando el usuario hace clic en cualquier lugar fuera del modal, cerrarlo
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = 'none';
+  }
+}
+
+
+function agregarDatos() {
+  // Obtener los valores de los inputs y eliminar espacios en blanco
+  var gpsId = document.getElementById('gpsId') ? document.getElementById('gpsId').value.trim() : '';
+  var gpsSerial = document.getElementById('gpsSerial') ? document.getElementById('gpsSerial').value.trim() : '';
+  var unitAssigned = document.getElementById('unitAssigned') ? document.getElementById('unitAssigned').value.trim() : '';
+  var simCardId = document.getElementById('simCardId') ? document.getElementById('simCardId').value.trim() : '';
+  var simCardUid = document.getElementById('simCardUid') ? document.getElementById('simCardUid').value.trim() : '';
+
+  // Validar que los campos no estén vacíos
+  if (!gpsId || !gpsSerial || !unitAssigned || !simCardId || !simCardUid) {
+    alert('Todos los campos deben estar llenos.');
+    return; // Detener la función si algún campo está vacío
+  }
+
+  // Crear una nueva fila y celdas para la tabla
+  var tabla = document.getElementById('tablaDatos').getElementsByTagName('tbody')[0];
+  var nuevaFila = tabla.insertRow();
+  nuevaFila.insertCell(0).innerHTML = gpsId;
+  nuevaFila.insertCell(1).innerHTML = gpsSerial;
+  nuevaFila.insertCell(2).innerHTML = unitAssigned;
+  nuevaFila.insertCell(3).innerHTML = simCardId;
+  nuevaFila.insertCell(4).innerHTML = simCardUid;
+
+  // Limpiar los campos del formulario y cerrar el modal
+  document.getElementById('formAgregar').reset();
+  document.getElementById('modalAgregar').style.display = 'none';
+}
+

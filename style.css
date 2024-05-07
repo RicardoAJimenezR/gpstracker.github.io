@@ -41,3 +41,196 @@ footer{
   padding: 10px 0;
   text-align: center;
 }
+
+/* Estilo para el fondo del modal */
+.modal {
+  display: none;
+  /* Oculto por defecto */
+  position: fixed;
+  /* Se queda en su lugar */
+  z-index: 1;
+  /* Se sitúa encima del contenido */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Ancho completo */
+  height: 100%;
+  /* Alto completo */
+  overflow: auto;
+  /* Habilita el desplazamiento si es necesario */
+  background-color: rgb(0, 0, 0);
+  /* Color de fondo */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Negro con opacidad */
+}
+
+/* Estilo para el contenido del modal */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  /* 15% desde la parte superior y centrado */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  /* Podría ser más o menos, dependiendo del tamaño de la pantalla */
+}
+
+/* Estilo para el botón de cerrar */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Estilo general del modal */
+.modal {
+  display: none; /* Oculto por defecto */
+  position: fixed; /* Se queda en su lugar */
+  z-index: 1; /* Se sitúa encima del contenido */
+  left: 0;
+  top: 0;
+  width: 100%; /* Ancho completo */
+  height: 100%; /* Alto completo */
+  overflow: auto; /* Habilita el desplazamiento si es necesario */
+  background-color: rgb(0,0,0); /* Color de fondo */
+  background-color: rgba(0,0,0,0.4); /* Negro con opacidad */
+}
+
+/* Estilo del contenido del modal */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% desde la parte superior y centrado */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Podría ser más o menos, dependiendo del tamaño de la pantalla */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); /* Sombra */
+  animation-name: animatetop; /* Nombre de la animación */
+  animation-duration: 0.4s; /* Duración de la animación */
+}
+
+/* Estilo para el botón de cerrar */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Animación para que el modal entre desde arriba */
+@keyframes animatetop {
+  from {top: -300px; opacity: 0}
+  to {top: 0; opacity: 1}
+}
+
+/* Estilos adicionales para el encabezado, cuerpo y pie del modal */
+.modal-header {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+/* Estilo general del modal */
+.modal {
+  display: none;
+  /* Oculto por defecto */
+  position: fixed;
+  /* Se queda en su lugar */
+  z-index: 1;
+  /* Se sitúa encima del contenido */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Ancho completo */
+  height: 100%;
+  /* Alto completo */
+  overflow: auto;
+  /* Habilita el desplazamiento si es necesario */
+  background-color: rgb(0, 0, 0);
+  /* Color de fondo */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Negro con opacidad */
+}
+
+/* Estilo del contenido del modal */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  /* 15% desde la parte superior y centrado */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  /* Podría ser más o menos, dependiendo del tamaño de la pantalla */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /* Sombra */
+  animation-name: animatetop;
+  /* Nombre de la animación */
+  animation-duration: 0.4s;
+  /* Duración de la animación */
+}
+
+/* Estilo para el botón de cerrar */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Animación para que el modal entre desde arriba */
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0
+  }
+
+  to {
+    top: 0;
+    opacity: 1
+  }
+}
+
+/* Estilos adicionales para el encabezado, cuerpo y pie del modal */
+.modal-header {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+.modal-body {
+  padding: 2px 16px;
+}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
